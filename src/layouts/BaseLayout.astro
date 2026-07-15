@@ -2,4 +2,49 @@
 import '../styles/global.css';
 const { title = 'Leicester Space Week — Brand guidelines', description = 'The living brand system for Leicester Space Week.' } = Astro.props;
 ---
-<!doctype html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content={description} /><link rel="icon" href="/favicon.svg" /><title>{title}</title></head><body><header class="site-header"><nav class="nav shell" aria-label="Main navigation"><a class="brand" href="/"><span class="brand-mark"></span><span>LEICESTER<br />SPACE WEEK</span></a><div class="nav-links"><a href="/logo/">Logo</a><a href="/colours/">Colours</a><a href="/typography/">Typography</a><a href="/visual-language/">Visual language</a><a href="/applications/">Applications</a><a href="/downloads/">Downloads</a></div><span class="menu-note">Brand portal</span></nav></header><main><slot /></main><footer class="footer"><div class="shell footer-grid"><div><div class="brand"><span class="brand-mark"></span><span>LEICESTER<br />SPACE WEEK</span></div><p>A shared visual language for an ambitious city of science, discovery and collaboration.</p></div><small>Brand guidelines · v1.0 · 2026</small></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.png" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Main navigation">
+        <a class="brand" href="/">
+          <img class="brand-mark" src="/assets/logos/icon.png" alt="Leicester Space Week brand mark" />
+          <span>LEICESTER<br />SPACE WEEK</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="/logo/">Logo</a>
+          <a href="/colours/">Colours</a>
+          <a href="/typography/">Typography</a>
+          <a href="/visual-language/">Visual language</a>
+          <a href="/applications/">Applications</a>
+          <a href="/downloads/">Downloads</a>
+        </div>
+
+        <span class="menu-note">Brand portal</span>
+      </nav>
+    </header>
+
+    <main><slot /></main>
+
+    <footer class="footer">
+      <div class="shell footer-grid">
+        <div>
+          <div class="brand">
+            <img class="brand-mark" src="/assets/logos/icon.png" alt="Leicester Space Week brand mark" />
+            <span>LEICESTER<br />SPACE WEEK</span>
+          </div>
+          <p>A shared visual language for an ambitious city of science, discovery and collaboration.</p>
+        </div>
+        <small>Brand guidelines · v1.0 · 2026</small>
+      </div>
+    </footer>
+  </body>
+</html>
